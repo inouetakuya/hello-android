@@ -1,8 +1,11 @@
 package info.i474.hello_android;
 
+import java.util.Date;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -12,7 +15,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -20,4 +22,8 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    public void buttonCurrent_onClick(View view) {
+    	TextView text = (TextView)findViewById(R.id.textResult);
+    	text.setText(new Date().toString());
+    }
 }
