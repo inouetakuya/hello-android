@@ -3,6 +3,7 @@ package info.i474.hello_android;
 import java.util.Date;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -24,6 +25,8 @@ public class MainActivity extends Activity {
     }
     
     public void buttonCurrent_onClick(View view) {
+    	Log.d("CurrentTime", new Date().toString());
+    	
     	Toast toast = Toast.makeText(this, new Date().toString(),  Toast.LENGTH_LONG);
     	toast.show();
     }
